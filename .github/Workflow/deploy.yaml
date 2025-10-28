@@ -1,0 +1,8 @@
+jobs:
+  scale_nginx:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger scale up
+        run: |
+          curl -X POST https://<your-cluster-endpoint>/trigger-flag \
+            -H "Authorization: Bearer <token>"
